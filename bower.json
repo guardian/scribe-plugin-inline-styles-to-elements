@@ -1,0 +1,9 @@
+{
+  "name": "scribe-plugin-inline-styles-to-elements",
+  "version": "0.1.0",
+  "main": "./scribe-plugin-inline-styles-to-elements.js",
+  "authors": [
+    "Sébastien Cevey <seb.cevey@guardian.co.uk>"
+  ],
+  "license": "Apache 2.0"
+}
