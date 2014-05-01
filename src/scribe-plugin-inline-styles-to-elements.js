@@ -11,7 +11,7 @@ define([
   return function () {
 
     return function (scribe) {
-      scribe.htmlFormatter.formatters.push(
+      scribe.registerHTMLFormatter('sanitize',
         asHtmlFormatter(inlineStylesFormatter)
       );
     };
