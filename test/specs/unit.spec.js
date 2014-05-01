@@ -1,4 +1,4 @@
-define(['src/formatter'], function (formatter) {
+define(['src/inline-styles-formatter'], function (formatter) {
   it('should wrap the content of a bold paragraph in a B element', function() {
     var root = document.createElement('div');
     root.innerHTML = '<p style="font-weight: bold">1</p>';

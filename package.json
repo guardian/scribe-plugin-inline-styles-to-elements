@@ -1,5 +1,9 @@
 {
   "name": "scribe-plugin-inline-styles-to-elements",
+  "scripts": {
+    "test":     "./node_modules/karma/bin/karma start karma.conf.js",
+    "test-dev": "./node_modules/karma/bin/karma start karma.conf.js --no-single-run"
+  },
   "devDependencies": {
     "plumber": "~0.3.0",
     "plumber-all": "~0.3.0",
@@ -7,15 +11,15 @@
     "plumber-requirejs": "~0.3.0",
     "plumber-uglifyjs": "~0.3.0",
     "plumber-write": "~0.3.0",
+    "requirejs": "^2.1.11",
+    "phantomjs": "^1.9.7-5",
     "mocha": "^1.18.2",
     "karma": "^0.12.14",
     "karma-mocha": "^0.1.3",
-    "requirejs": "^2.1.11",
     "karma-requirejs": "^0.2.1",
     "karma-chrome-launcher": "^0.1.3",
     "karma-firefox-launcher": "^0.1.3",
     "karma-phantomjs-launcher": "^0.1.4",
-    "phantomjs": "^1.9.7-5",
     "karma-chai": "^0.1.0"
   }
 }
