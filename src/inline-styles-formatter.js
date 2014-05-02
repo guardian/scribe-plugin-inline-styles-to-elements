@@ -65,8 +65,12 @@ define([], function () {
   var filters = [
     styleToElement('fontWeight', 'bold',   'b'),
     styleToElement('fontStyle',  'italic', 'i'),
-    styleToElement('textDecoration', 'underline',    'u'),
-    styleToElement('textDecoration', 'line-through', 'strike')
+    styleToElement('textDecoration',     'underline',    'u'),
+    styleToElement('textDecoration',     'line-through', 'strike'),
+    // Note: in newer browsers that support it, may appear as
+    // text-decoration-line instead
+    styleToElement('textDecorationLine', 'underline',    'u'),
+    styleToElement('textDecorationLine', 'line-through', 'strike')
     // TODO: headings?
     // TODO: clear empty styles?
   ];

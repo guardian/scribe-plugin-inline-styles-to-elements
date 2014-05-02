@@ -21,10 +21,20 @@ define(['src/inline-styles-formatter'], function (formatter) {
     name: 'strike-through',
     element: 'strike',
     style: 'text-decoration: line-through'
+  // TODO: test for text-decoration-line once it's supported by the browser we test with
+  // },{
+  //   name: 'strike-through',
+  //   element: 'strike',
+  //   style: 'text-decoration-line: line-through'
   },{
     name: 'underline',
     element: 'u',
     style: 'text-decoration: underline'
+  // TODO: test for text-decoration-line once it's supported by the browser we test with
+  // },{
+  //   name: 'underline',
+  //   element: 'u',
+  //   style: 'text-decoration-line: underline'
   }];
 
 
