@@ -47,6 +47,12 @@ define([], function () {
 
         var nCopy = n.cloneNode(false);
         nCopy.style[styleProp] = null;
+
+        // Remove any 'style=""' for consistency
+        if (nCopy.getAttribute('style') === '') {
+          nCopy.removeAttribute('style');
+        }
+
         nCopy.appendChild(traverse(strongWrapper, mapper));
         return nCopy;
       } else {
@@ -59,8 +65,8 @@ define([], function () {
   var filters = [
     styleToElement('fontWeight', 'bold',   'b'),
     styleToElement('fontStyle',  'italic', 'i'),
-    styleToElement('text-decoration', 'underline',    'u'),
-    styleToElement('text-decoration', 'line-through', 'strike')
+    styleToElement('textDecoration', 'underline',    'u'),
+    styleToElement('textDecoration', 'line-through', 'strike')
     // TODO: headings?
     // TODO: clear empty styles?
   ];

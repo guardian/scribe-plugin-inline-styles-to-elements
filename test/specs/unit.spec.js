@@ -34,13 +34,13 @@ define(['src/inline-styles-formatter'], function (formatter) {
       it('should wrap the content of a '+mapping.name+' paragraph in a '+mapping.element.toUpperCase()+' element', function() {
         var root = createContainer('<p style="' +mapping.style+ '">1</p>');
         var output = formatter(root).innerHTML;
-        expect(output).to.equal('<p style=""><' +mapping.element+ '>1</' +mapping.element+ '></p>');
+        expect(output).to.equal('<p><' +mapping.element+ '>1</' +mapping.element+ '></p>');
       });
 
       it('should wrap the content of a '+mapping.name+' SPAN in a ' +mapping.element.toUpperCase()+ ' element', function() {
         var root = createContainer('<p>1 <span style="'+mapping.style+'">2</span></p>');
         var output = formatter(root).innerHTML;
-        expect(output).to.equal('<p>1 <span style=""><' +mapping.element+ '>2</' +mapping.element+ '></span></p>');
+        expect(output).to.equal('<p>1 <span><' +mapping.element+ '>2</' +mapping.element+ '></span></p>');
       });
     });
 
