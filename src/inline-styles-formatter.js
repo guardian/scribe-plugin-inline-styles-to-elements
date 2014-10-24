@@ -6,7 +6,7 @@ define([], function () {
 
   // these do not need to be wrapped because their style is
   // implicit in their NodeType
-  var styleElements = ["B", "STRONG", "I", "EM", "U", "STRIKE"];
+  var styleElements = ["B", "STRONG", "I", "EM", "U", "STRIKE", "SUP", "SMALL", "SUB"];
 
   function isStyleElement(n) {
     return styleElements.indexOf(n.nodeName);
