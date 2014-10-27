@@ -3,7 +3,14 @@ define([], function () {
   'use strict';
 
   /* API helpers */
-  // TODO: move to shared place?
+
+  // these do not need to be wrapped because their style is
+  // implicit in their NodeType
+  var styleElements = ["B", "STRONG", "I", "EM", "U", "STRIKE", "SUP", "SMALL", "SUB"];
+
+  function isStyleElement(n) {
+    return styleElements.indexOf(n.nodeName);
+  }
 
   function isElement(node) {
     return node.nodeType === Node.ELEMENT_NODE;
@@ -36,7 +43,7 @@ define([], function () {
 
   function styleToElement(styleProp, styleValue, elName) {
     return function(n, mapper) {
-      if (isElement(n) && n.style[styleProp] === styleValue) {
+      if (isElement(n) && n.style[styleProp] === styleValue && !isStyleElement(n)) {
         var strongWrapper = document.createElement(elName);
         var child = n.firstChild;
         while (child) {
